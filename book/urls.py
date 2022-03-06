@@ -15,7 +15,13 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from api.views import Book_List, Book_pk, Book_Find
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+
+    # api routes
+    path('rest/books/', Book_List.as_view()),
+    path('rest/books/<int:pk>', Book_pk.as_view()),
+    path('rest/findbook', Book_Find.as_view()),
 ]
