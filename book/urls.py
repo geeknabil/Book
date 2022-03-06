@@ -21,7 +21,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
 
     # api routes
-    path('rest/books/', Book_List.as_view()),
-    path('rest/books/<int:pk>', Book_pk.as_view()),
-    path('rest/findbook', Book_Find.as_view()),
+    path('api/books/', Book_List.as_view()),
+    path('api/books/<int:pk>', Book_pk.as_view()),
+    path('api/findbook', Book_Find.as_view()),
 ]
